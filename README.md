@@ -3,7 +3,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
 [![LangChain](https://img.shields.io/badge/framework-LangChain-green.svg)](https://github.com/langchain-ai/langchain)
 [![Ollama](https://img.shields.io/badge/engine-Ollama-orange.svg)](https://ollama.com/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 A powerful, light-weight, local-first LLM development framework built with **LangChain** and **Ollama**. This repository provides an end-to-end playground demonstrating advanced LangChain features: LangChain Expression Language (LCEL), structured JSON extraction with Pydantic, custom tools execution via ReAct agents, and session memory reporting.
 
@@ -21,7 +21,7 @@ graph TD
     Prompt --> LLM[ChatOllama: qwen2.5]
     LLM --> Parser[Str / JSON / Pydantic Output Parser]
     
-    subgraph Agent Loop (ReAct)
+    subgraph "Agent Loop (ReAct)"
         LLM_Agent[Ollama qwen2.5:3b] <--> AgentExecutor[ReAct Agent]
         AgentExecutor <--> Calculator[Calculator Tool]
         AgentExecutor <--> StudentLookup[Student Lookup Tool]
